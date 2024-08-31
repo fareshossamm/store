@@ -1,0 +1,92 @@
+/* Cart.css */
+
+.cart-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 15px; /* Spacing between grid items */
+  }
+  
+  .cart-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    position: relative; /* For positioning the remove button */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .cart-item-image {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Adds spacing below the image */
+  }
+  
+  .cart-item-details {
+    text-align: center; /* Centers text in the details section */
+  }
+  
+  .cart-item-remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f00; /* Red background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px; /* Font size for the "X" */
+  }
+  
+  .cart-total {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    margin-top: 20px; /* Adds spacing above total */
+  }
+  
+  .empty {
+    text-align: center; 
+    margin-top: 15%; 
+    font-size:30px;
+    font-weight: bold; 
+    text-transform: uppercase;
+    color: #f00; 
+  }
+  
+  @media(max-width: 992px) {
+    .empty {
+      font-size: 1rem; 
+      margin-top: 10%; 
+    }
+  }
+  
+  @media(max-width: 768px) {
+    .cart-item {
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+    
+    .cart-item-image {
+      width: 80px; 
+    }
+  }
+  .alert{
+    text-align: center;
+    margin-top: 15%;
+  }
+  .tittle-cart {
+    font-size: 20px;
+    color: #3f3f3f;
+  }
+  .bold{
+    font-weight: bold;
+  }

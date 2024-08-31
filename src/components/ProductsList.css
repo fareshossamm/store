@@ -1,0 +1,166 @@
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    transition: all 0.3s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 0.5em;
+    background: #fefefe;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    margin: 5px;
+}
+
+.button-container .btn.active {
+    background-color: #0d6efd; 
+    color: white;
+    border-color: #0d6efd;
+  }
+
+.btn:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: #ffffff;
+    border: 1px solid #0d6efd;
+}
+
+.btn:hover:before {
+    top: -35%;
+    background-color: #0d6efd;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.btn:hover:after {
+    top: -45%;
+    background-color: #0d6efd;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4 {
+    flex: 1 0 31%;
+    margin: 1%;
+}
+
+@media (max-width: 1200px) {
+    .col-4 {
+        flex: 1 0 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-4 {
+        flex: 1 0 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn {
+        flex: 1 0 100%;
+        margin: 5px 0;
+    }
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.card-img-top {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card-title,
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    display: block;
+    margin-top: 1rem;
+} 
+
+.button-container button{
+    text-transform: capitalize;
+}
+.star{
+    color: rgb(241, 241, 0);
+}
+.dollar{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 22px;
+}
